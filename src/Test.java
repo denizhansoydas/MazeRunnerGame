@@ -19,6 +19,7 @@ public class Test {
 	public static void main(String[] args) {
 		//Scanners for console and file
 		Scanner scanConsole = new Scanner(System.in);
+		System.out.println("Please enter the file name for the input maze:");
 		String fileName = scanConsole.nextLine();
 		
 		//ArrayList of rows
@@ -89,11 +90,15 @@ public class Test {
 		}
 		
 		//print the sorted paths
-		System.out.println(paths_sorted.size() + " treasures are found.");
+
 		if(paths_sorted.size() > 0) {
+			System.out.println(paths_sorted.size() + " treasures are found.");
 			System.out.println("Paths are:");
 			for (int i = 0; i < paths_sorted.size(); i++)
 				System.out.println((i + 1) + ")" + paths_sorted.get(i));
+		}
+		else{
+			System.out.println("No treasure was found.");
 		}
 	}
 	//recursive function that traces all the maze and obtains the possible paths
@@ -160,7 +165,7 @@ public class Test {
 		}
 		//if we are in a wall, we cut the way there and do not go further.
 		else if (myMap[row][column] == '|' || myMap[row][column] == '+' || myMap[row][column] == '-') {
-			return;
+			//do nothing
 		} 
 		else {
 			System.out.println("error: map character");
