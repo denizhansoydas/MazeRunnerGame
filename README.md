@@ -9,7 +9,7 @@ HOW TO USE?
 
 -Export it into a folder.
 
--User your favourite IDE's import folder option.
+-Use your favourite IDE's import folder option.
 
 -Run Test.java
 
